@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME-X</title>
+    <!--Stylesheet-->
+     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbyLvTsuIde58Q20O__YkT8Ry6ASkZKrfJQ&usqp=CAU">
+    <link rel="stylesheet" href="style.css">
+<style>
+    
+     nav{
+ 
+        position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+      
+        color: rgb(254, 253, 253);
+        display: flex;
+        /* justify-content: space-around; */
+         align-items: center;
+         font-family: sans-serif;
+  
+      }
+      .logo{
+            font-size: 2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .img{
+   
+         width: 5%;
+          
+         
+        
+      }
+  .menu a{
+     
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+      left: 100%;
+    
+  
+  }
+  .menu a:before {
+       
+         content:'';
+         position: absolute;
+         top:0%;
+         left: 0%;
+         width: 100%;
+         height: 100%;
+         border-bottom: 2px solid rgb(255, 255, 255);
+         transition: 0.4s linear; 
+  
+  }
+  .menu a:hover:before{
+     width: 10%;
+  }
+  .regis a{
+     
+     text-decoration: none;
+    color: rgb(255, 193, 23);
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    left: 555%;
+  
+     
+  
+  }
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{
+    background-color: #292929;
+}
+.container{
+
+    /* top: 9%; */
+    height: 100%;
+    width: 100%;
+    bottom: 0%;
+    padding: 0;
+    position: absolute;
+    /* transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%; */
+    overflow: hidden;
+  
+   
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+img{
+    width: 100%;
+}
+
+
+.ctrl{
+    
+     position: absolute;
+     width: 50%;
+     top: 100%;
+     left:-28%;
+     z-index: 2;
+     box-shadow: #6a2222;
+     transition-property: width,height;
+      
+    transition-duration: 2s;   
+}
+.ctrl:hover{
+   width: 700px;
+   height: 700px;
+}
+.txt2{
+
+    position:absolute;
+     width: 40%;
+     top: 100%;
+     color:rgb(172, 172, 172);
+  font-size: 200%;
+    left: 15%;
+
+
+}
+#foto{
+    position: absolute;
+     width: 40%;
+     top: 101%;
+     left:60%;
+     z-index: 2;
+}
+#box{
+      
+    position: absolute;
+    height: 65%;
+     width: 55%;
+     top: 120%;
+     left:22%;
+    
+       border: #ffffff;
+    background-color: #3a3a3a;
+     color: #ffa200;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 150%;
+     padding-top: 5%;
+     padding-left: 3%;
+     #btxt{
+        color: #ffffff;
+        padding-top: 2%;
+        font-size: 160%;
+     }
+     #btn{
+         margin-top: 5%;
+        background-color: #292929;
+        width: 20%;
+        height: 10%;
+        
+        color: #ffffff;
+        transition-property:color ;
+        
+        
+
+     }
+     #btn:hover{
+          color: #ffa200;
+     }
+  
+
+}
+.txt3{
+    font-size: 30%;
+    letter-spacing: 8px;
+}
+
+.cont2{
+       
+    position: absolute;
+     width: 100%;
+     height: 50%;   
+     top: 200%;
+    align-items: center;
+     box-shadow: #6a2222;
+    background-color: #212121;
+    #fec{
+        
+        
+        color: #ffa200  ;
+padding-left: 40%;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+}
+.set{
+    display: flex;
+    position: absolute;
+     width: 30%;
+     height: 30%;
+     left: 2%;
+     right:71%;
+     top: 40%;
+    align-items: center;
+    border: #6a2222;
+    border-radius: 2%;
+     box-shadow: #6a2222;
+  
+
+}
+#i1{
+    width: 35%;
+
+   background-color: #6a2222;
+    transition-property: width,color;
+     transition-duration: 1s;
+     
+}
+#i1:hover{
+  
+    width: 50%;
+     color: #f70202;
+}
+/* #i2{
+    width: 35%;
+    background-color: #6a2222;
+     transition-property: width,color,;
+      transition-duration: 2s;
+      
+ }
+ #i2:hover{
+   
+    width: 50%;
+    color: #adadad;
+
+ 
+ 
+ }
+ #i3{
+    width: 35%;
+    background-color: #6a2222;
+     transition-property: width,color;
+      transition-duration: 2s;
+      
+ }
+ #i3:hover{
+    color: #adadad;
+    width: 50%;
+    
+ 
+ 
+ } */
+
+ .last{
+    position: absolute;
+     width: 100%;
+     height: 80%;   
+     top: 250%;
+     padding-top: 20%;
+    
+     box-shadow: #6a2222;
+     background-color: #212121;
+    #live{
+        
+        position: absolute;
+        z-index: 2;
+      top: 10%;
+      padding-left: 40%;
+      color: #ff9500  ;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+    
+    }
+    #icon{
+
+        width:5%;
+        position: absolute;
+        z-index: 2;
+        left: 34%;
+      top: 7%;
+        color: #ff9100  ;
+    }
+
+ }
+ .lastin{
+    display: flex;
+    position: absolute;
+     width: 100%;
+     height: 60%;   
+   top: 20%; 
+    background-color: #000000;
+    
+    #l1{
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        width: 40%;
+        height: 100%;
+        left: 10%;
+        border: #000000;
+
+    }
+    #l2{
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        width: 40%;
+        height: 100%;
+        left: 50%;
+        border: #000000;
+
+    }
+
+    }
+
+    .about{
+
+        position: absolute;
+     width: 100%;
+     height: 80%;   
+     top: 328%;
+     padding-top: 20%;
+     background-color: #212121;
+     #png{
+        position: absolute;
+     width: 40%;
+     top: -10%;
+     left:50%;
+     z-index: 2;
+     }
+   #form{
+    position: absolute;
+    z-index: 2;
+   
+   top: 25%;
+   left: 10%;
+   size: 40%;
+   
+
+   
+  }
+
+    }
+
+    #aboutin{
+        display: flex;
+    position: absolute;
+     width: 100%;
+     height: 30%;
+     
+     
+     top: 10%;
+     background-color: #ff9500;
+   #sub{
+    font-size: 10#;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10%;
+    padding-top: 2%;
+   }
+  
+  
+    }
+     
+    #a1{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: absolute;
+    z-index: 2;
+   font-size: 100%;
+   top: 190%;
+   left: 10%;
+   size: 40%;
+   color: #ffffff;
+   
+
+    }
+    #a2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: absolute;
+    z-index: 2;
+   font-size: 100%;
+   top: 190%;
+   left: 25%;
+   size: 40%;
+   color: #ffffff;
+    }
+    #a3{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: absolute;
+    z-index: 2;
+   font-size: 100%;
+   top: 190%;
+   left: 40%;
+   size: 40%;
+   color: #ffffff;
+    }
+    #a4{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: absolute;
+    z-index: 2;
+   font-size: 100%;
+   top: 190%;
+   left: 55%;
+   size: 40%;
+   color: #ffffff;
+    }
+
+</style>
+
+
+
+</head>
+<body>
+   
+
+    
+        <nav>
+            <div class="logo">
+                Game-X 
+                
+              </div>
+              <div class="img"><img  
+                src="/web2/1536913_controller_gamer_new_white_xbox one_icon.png" width="2"></div>
+             <div class="menu"> 
+                <a href="#">Home</a>
+                <a href="#">Contect</a>
+                 <a href="#">about us</a>
+             </div>
+          <div class="regis">
+             <a href="#">Signup</a>
+          </div>
+        </nav> 
+          <div class="container">
+
+        
+            <div class="wrapper">
+                
+                <img  src="/hello/wallpaperflare.com_wallpaper (53).jpg">
+                <img src="/web2/wallpaperflare.com_wallpaper (59).jpg">
+                <img src="/web2/wallpaperflare.com_wallpaper (57).jpg">
+             
+                <img src="/web2/wallpaperflare.com_wallpaper (61).jpg">
+            </div>
+        </div>
+   
+
+
+    <section id="sec">
+    <div class="ctrl">
+       <img src="/web2/controller.png" >
+
+
+    </div>
+     <div class="txt2">
+          <span>EXPERIENCE BETTER GAMING</span>   
+          <div class="txt3">
+            
+            <h1  style="color: rgb(255, 149, 0);"> WITH OUR STATE OF ART  </h1> 
+          </div> 
+           
+ 
+        </div>
+        <div id="foto">
+         <img src="/web2/pngwing.com.png" alt="">
+        </div>
+        <div id="box">
+             <H1>DEAL OF THE DAY</H1>
+             <h1 id="btxt">GTA V & RED DEAD <br>REDEMPTION FOR ONLY</h1>
+             <h1>$44.99</h1>
+             <button id="btn">
+                GET IT NOW
+             </button>
+
+        </div>
+
+    </section>
+   
+      <div class="cont2">
+        <h1 id="fec">FEATURED GAMES</h1>
+      
+<div class="set" >
+    
+     <img id="i1" src="/web2/peakpx (1).jpg" alt="RACING">
+     <img id="i1" src="/web2/peakpx (2).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (3).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (4).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (5).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (6).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (7).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (8).jpg" alt="">
+     <img id="i1" src="/web2/peakpx (9).jpg" alt="">
+</div>
+
+      </div>
+       
+      <section class="last">
+        <h1 id="live">LIVE STREAM</h1>
+        <img id="icon" src="/web2/9989387_streaming_video_media_live_internet_icon.png" alt="">
+        
+        <div class="lastin">
+            <img id="l1" src="/web2/peakpx (10).jpg" alt="">
+            <img id="l2" src="/web2/wallpaperflare.com_wallpaper (62).jpg" alt="">
+        </div>
+
+
+      </section>
+
+      <div class="about">
+        <img id="png" src="/web2/pngwing.com (2).png" alt="">
+        <form id="form" action="/action_page.php">
+           
+            <input type="email" id="email" name="email">
+            <input type="submit" value="Submit">
+          </form>
+          
+
+         <div id="aboutin">
+         <h1 id="sub">SUBSCRIBE US</h1>
+         <h1 id="a1">
+            FEATURE
+         </h1>
+         <h1 id="a2">
+            GET STARTED
+         </h1>
+         <h1 id="a3">
+            ABOUT
+         </h1>
+         <h1 id="a4">
+            DOWNLOADS
+         </h1>
+        
+          
+
+         </div>
+
+
+      </div>
+    
+
+</body>
+</html>
